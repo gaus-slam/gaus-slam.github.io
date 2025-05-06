@@ -41,7 +41,7 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
-
+<!-- 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -80,7 +80,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -95,7 +95,7 @@
             <span class="author-block">
               Lin Chen<sup>2</sup>,</span>
             <span class="author-block">
-              Kaiting Zhang<sup>2</sup>,
+              Kaiting Zhang<sup>1</sup>,
             </span>
             <span class="author-block">
               Zhongliang Zhao<sup>1</sup>,
@@ -104,16 +104,16 @@
               <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>1</sup>,
             </span> -->
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Chengfeng Hou</a><sup>1</sup>,
+              Chengfeng Hou<sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ziping Yu</a><sup>1</sup>
+              Ziping Yu<sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Beihang University,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>2</sup>Northwestern Polytechnical University</span>
           </div>
 
           <div class="column has-text-centered">
@@ -129,7 +129,7 @@
                 </a>
               </span> -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/2505.01934"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -148,7 +148,7 @@
                 </a>
               </span> -->
               <!-- Code Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -156,7 +156,7 @@
                   </span>
                   <span>Code</span>
                   </a>
-              </span>
+              </span> -->
               <!-- Dataset Link. -->
               <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
@@ -179,13 +179,14 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/ScanNet_S1.mp4"
+        <source src="./static/videos/replica_office4_render.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        <!-- <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
         free-viewpoint
-        portraits.
+        portraits. -->
+        GauS-SLAM on Replica Office4
       </h2>
     </div>
   </div>
@@ -290,6 +291,23 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Overview</h2>
+
+      <div class="row justify-content-center mb-1" style="display: flex; flex-direction: column; align-items: center;">
+          <img src= /static/images/2dgf_overview.svg style="width:80%; margin-bottom: 2rem;" class="figure-img img-fluid selected-figure drop-shadow">
+          <p class="text-center mx-auto" style="width:80%">
+            This framework consists of a front-end that performs tracking and incremental 
+            mapping using the local map, and a back-end responsible for merging local maps 
+            and submap-based optimizing of global map.     
+          </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -297,7 +315,7 @@
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
-      <div class="column">
+      <!-- <div class="column">
         <div class="content">
           <h2 class="title is-3">Replica</h2>
           <p>
@@ -305,15 +323,15 @@
             would be impossible without nerfies since it would require going through a wall.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/Replica_room0.mp4"
+            <source src="./static/videos/render_compressed_0.mp4"
                     type="video/mp4">
           </video>
         </div>
-      </div>
+      </div> -->
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
+      <!-- <div class="column">
         <h2 class="title is-3">Scannet</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -321,15 +339,151 @@
               As a byproduct of our method, we can also solve the matting problem by ignoring
               samples that fall outside of a bounding box during rendering.
             </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/Scannet_0000.mp4"
+            <video id="matting-video"  autoplay controls muted loop playsinline height="110%" >
+              <source src="./static/videos/viz_compressed.mp4"
                       type="video/mp4">
             </video>
           </div>
 
         </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+<!-- 
+<section class="section">
+  <h1 class="title is-1 has-text-centered">ScanNet</h1>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Scene0000</h2>
+          <video id="dollyzoom" autoplay controls muted loop playsinline style="width: 100%; max-width: 640px; height: auto;">
+            <source src="./static/videos/s0000.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Scene0059</h2>
+          <video id="dollyzoom" autoplay controls muted loop playsinline style="width: 100%; max-width: 640px; height: auto;">
+            <source src="./static/videos/s0059.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Scene0106</h2>
+          <video id="dollyzoom" autoplay controls muted loop playsinline style="width: 100%; max-width: 640px; height: auto;">
+            <source src="./static/videos/s0106.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Scene0169</h2>
+          <video id="dollyzoom" autoplay controls muted loop playsinline style="width: 100%; max-width: 640px; height: auto;">
+            <source src="./static/videos/s0169.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+  <table border="1" style="border-collapse: collapse; font-size: 24px; width: 70%; margin: 0 auto;">
+    <tr style="text-align: center; vertical-align: middle;">
+      <th style="font-size: 26px;">Replica/ATE</th>
+      <th>room0</th>
+      <th>room1</th>
+      <th>room2</th>
+      <th>office0</th>
+      <th>office1</th>
+      <th>office2</th>
+      <th>office3</th>
+      <th>office4</th>
+      <th>mean</th>
+    </tr>
+    <tr style="text-align: center; vertical-align: middle;">
+      <td>splatam</td>
+      <td>0.31</td>
+      <td>0.40</td>
+      <td>0.29</td>
+      <td>0.47</td>
+      <td>0.27</td>
+      <td>0.29</td>
+      <td>0.32</td>
+      <td>0.55</td>
+      <td>0.36</td>
+    </tr>
+    <tr style="text-align: center; vertical-align: middle;">
+      <td>loopsplat</td>
+      <td>0.28</td>
+      <td>0.22</td>
+      <td>0.17</td>
+      <td>0.22</td>
+      <td>0.16</td>
+      <td>0.49</td>
+      <td>0.20</td>
+      <td>0.30</td>
+      <td>0.26</td>
+    </tr>
+    <tr style="text-align: center; vertical-align: middle;">
+      <td>MonoGS</td>
+      <td>0.76</td>
+      <td>0.37</td>
+      <td>0.23</td>
+      <td>0.66</td>
+      <td>0.72</td>
+      <td>0.30</td>
+      <td>0.19</td>
+      <td>1.46</td>
+      <td>0.58</td>
+    </tr>
+    <tr style="text-align: center; vertical-align: middle;">
+      <td>gs-slam</td>
+      <td>0.48</td>
+      <td>0.53</td>
+      <td>0.33</td>
+      <td>0.52</td>
+      <td>0.41</td>
+      <td>0.59</td>
+      <td>0.46</td>
+      <td>0.7</td>
+      <td>0.50</td>
+    </tr>
+    <tr style="text-align: center; vertical-align: middle;">
+      <td>cg-slam</td>
+      <td>0.29</td>
+      <td>0.27</td>
+      <td>0.25</td>
+      <td>0.33</td>
+      <td>0.14</td>
+      <td>0.28</td>
+      <td>0.31</td>
+      <td>0.29</td>
+      <td>0.27</td>
+    </tr>
+    <tr style="text-align: center; vertical-align: middle;">
+      <td>ours</td>
+      <td>0.10</td>
+      <td>0.10</td>
+      <td>0.09</td>
+      <td>0.09</td>
+      <td>0.05</td>
+      <td>0.12</td>
+      <td>0.10</td>
+      <td>0.07</td>
+      <td>0.09</td>
+    </tr>
+  </table>
+</section> -->
     <!--/ Matting. -->
 
     <!-- Animation. -->
@@ -427,7 +581,7 @@
 </section>
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -437,7 +591,7 @@
   year      = {2021},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
