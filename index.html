@@ -297,8 +297,8 @@
       <h2 class="title is-3">Overview</h2>
 
       <div class="row justify-content-center mb-1" style="display: flex; flex-direction: column; align-items: center;">
-          <img src= /static/images/2dgf_overview.svg style="width:80%; margin-bottom: 2rem;" class="figure-img img-fluid selected-figure drop-shadow">
-          <p class="text-center mx-auto" style="width:80%">
+          <img src= /static/images/2dgf_overview.svg style="width:60%; margin-bottom: 2rem;" class="figure-img img-fluid selected-figure drop-shadow">
+          <p class="text-center mx-auto" style="width:60%">
             This framework consists of a front-end that performs tracking and incremental 
             mapping using the local map, and a back-end responsible for merging local maps 
             and submap-based optimizing of global map.     
@@ -311,16 +311,18 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-
+    <h2 class="title is-3">Performance</h2>
+    <p style="font-size: 1.5rem;">
+        GauS-SLAM demonstrates superior performance in high-quality RGB-D datasets. 
+        Our method demonstrates SOTA performance on the Replica and challenging ScanNet++
+        dataset, with tracking accuracy improvements of <strong>62.5%</strong>(GS-ICP) and <strong>84.8%</strong>(LoopSplat), respectively.
+    </p>
+    <br>
     <div class="columns is-centered">
-      <!-- <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-      </p> -->
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Replica</h2>
+          <h3 class="title is-3" style="text-align: center;" >Replica</h3>
           <!-- <p>
             Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
             would be impossible without nerfies since it would require going through a wall.
@@ -335,7 +337,7 @@
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Scannet++</h2>
+        <h3 class="title is-3" style="text-align: center;">Scannet++</h3>
         <div class="columns is-centered">
           <div class="column content">
             <!-- <p>
